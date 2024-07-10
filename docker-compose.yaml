@@ -1,5 +1,11 @@
 version: '3'
 services:
+  app:
+    build: .
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/home/node/app
   keycloak:
     image: quay.io/keycloak/keycloak:25.0
     command: start-dev
